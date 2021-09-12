@@ -1,7 +1,7 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 public class BananaShake extends FoodItem {
-	BananaShake()
+	public BananaShake()
 	{
 		taste = Taste.SWEET;
 		category = Category.SHAKES;

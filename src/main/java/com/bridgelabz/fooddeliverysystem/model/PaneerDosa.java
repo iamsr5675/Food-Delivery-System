@@ -1,7 +1,7 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 public class PaneerDosa extends FoodItem {
-	PaneerDosa()
+	public PaneerDosa()
 	{
 		taste = Taste.SWEET_SOUR;
 		category = Category.MAIN_COURSE;

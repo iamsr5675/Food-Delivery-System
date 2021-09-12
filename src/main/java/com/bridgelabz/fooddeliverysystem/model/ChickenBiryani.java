@@ -1,7 +1,7 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 public class ChickenBiryani extends FoodItem {
-	ChickenBiryani()
+	public ChickenBiryani()
 	{
 		taste = Taste.SPICY;
 		category = Category.MAIN_COURSE;

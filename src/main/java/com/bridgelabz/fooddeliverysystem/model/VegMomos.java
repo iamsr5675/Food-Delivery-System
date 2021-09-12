@@ -1,7 +1,7 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 public class VegMomos extends FoodItem {
-	VegMomos()
+	public VegMomos()
 	{
 		taste = Taste.SPICY;
 		category = Category.STARTERS;

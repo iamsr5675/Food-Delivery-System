@@ -1,7 +1,10 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.view;
 
 import java.util.List;
 import java.util.Scanner;
+
+import com.bridgelabz.fooddeliverysystem.controller.Application;
+import com.bridgelabz.fooddeliverysystem.model.FoodItem;
 //view layer
 public class UserInterface {
 	public void print(List<FoodItem> foodList) {

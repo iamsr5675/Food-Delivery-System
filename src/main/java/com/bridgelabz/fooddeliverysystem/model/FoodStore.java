@@ -1,4 +1,4 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 
 import java.util.ArrayList;

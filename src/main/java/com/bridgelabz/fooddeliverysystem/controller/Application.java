@@ -1,6 +1,14 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.controller;
 
 import java.util.Scanner;
+
+import com.bridgelabz.fooddeliverysystem.model.BananaShake;
+import com.bridgelabz.fooddeliverysystem.model.ChickenBiryani;
+import com.bridgelabz.fooddeliverysystem.model.FoodStore;
+import com.bridgelabz.fooddeliverysystem.model.HakkaNoodles;
+import com.bridgelabz.fooddeliverysystem.model.PaneerDosa;
+import com.bridgelabz.fooddeliverysystem.model.VegMomos;
+import com.bridgelabz.fooddeliverysystem.view.UserInterface;
 
 //controller layer
 public class Application 

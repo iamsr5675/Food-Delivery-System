@@ -1,7 +1,7 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 public class HakkaNoodles extends FoodItem {
-	HakkaNoodles()
+	public HakkaNoodles()
 	{
 		taste = Taste.SPICY;
 		category = Category.MAIN_COURSE;

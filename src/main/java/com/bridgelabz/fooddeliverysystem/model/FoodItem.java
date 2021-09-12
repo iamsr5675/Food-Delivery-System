@@ -1,4 +1,4 @@
-package com.bridgelabz.fooddeliverysystem;
+package com.bridgelabz.fooddeliverysystem.model;
 
 public class FoodItem {
 	enum Taste{SWEET, SOUR, SPICY, SWEET_SOUR};
