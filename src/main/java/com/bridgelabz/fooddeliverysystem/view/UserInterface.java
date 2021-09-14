@@ -101,69 +101,71 @@ public class UserInterface {
 	}
 	
 	public FoodItem editItem(FoodItem foodItem) {
-		Boolean b = true;
-        while (b) {
-            Scanner sc = new Scanner(System.in);
-            System.out.print("Enter the field that you want to edit: \n1. for Name\n2. for Taste\n3. for Category\n4. for Type\n5. for Price\n6. for Exit\n ");
-            int choice = sc.nextInt();
-            switch (choice) {
-                case 1: 
-                    System.out.print("\nEnter Correct Item Name: ");
-                    String itemName = sc.nextLine();
-                    foodItem.itemName = sc.nextLine();
-                    foodItem.setItemName(itemName);
-                case 2: 
-                    System.out.print("Enter Correct Taste: \n1. For Spicy. \n2. For Sweet. \n3. For Sour. \n4. For Sweet-Sour\n ");
-                    int tasteChoice = sc.nextInt();
-                    switch (tasteChoice) {
-                        case 1:
-                        	foodItem.setTaste(FoodItem.Taste.SPICY);
-                        case 2:
-                        	foodItem.setTaste(FoodItem.Taste.SWEET);
-                        case 3:
-                        	foodItem.setTaste(FoodItem.Taste.SOUR);
-                        case 4:
-                        	foodItem.setTaste(FoodItem.Taste.SWEET_SOUR);
-                        default:
-                        	System.out.println("Invalid Choice, Please enter a valid choice");
-                    }
-                case 3: 
-                    System.out.print("Enter Correct Category type: \n1. Starter. \n2. For Main Course. \n3. For Beverages \n ");
-                    int categoryChoice = sc.nextInt();
-                    switch (categoryChoice) {
-                        case 1:
-                        	foodItem.setCategory(FoodItem.Category.STARTER);
-                        case 2:
-                        	foodItem.setCategory(FoodItem.Category.MAIN_COURSE);
-                        case 3:
-                        	foodItem.setCategory(FoodItem.Category.BEVERAGES);
-                        default:
-                        	System.out.println("Invalid Choice, Please enter a valid choice");
-                    }
-                case 4 : 
-                    System.out.print("Enter Correct Type: \n1. for Veg type. \n2. for NonVeg Type\n ");
-                    int type = sc.nextInt();
-                    switch (type) {
-                        case 1 :
-                        	foodItem.setType(FoodItem.VegType.Veg);
-                        case 2 :
-                        	foodItem.setType(FoodItem.VegType.Non_Veg);
-                        default :
-                        	System.out.println("Invalid Choice, Please enter a valid choice");
-                    }
-                case 5 : 
-                    System.out.print("Enter Correct Price: Rs.");
-                    int price = sc.nextInt();
-                    foodItem.setPrice(price);
-                
-                case 6 : 
-                    b = false;
-                
-                default : 
-                	System.out.println("Invalid Choice, Please enter a valid choice");
-            }
-        }
-        System.out.println("\n Food Item Updated Successfully!!\n");
-        return foodItem;
-    }
+		Scanner sc = new Scanner(System.in);
+			System.out.println("Select the entity you want to edit: \n1. To change the Item Name. \n2. To change the Taste. \n3. To change the Category. \n4. To change the Type. \n5. To change the Price. \n6. To exit.");
+			int choice = sc.nextInt();
+			
+			switch(choice) {
+				case 1:
+					System.out.println("Give the new item name:");
+					String foodName = sc.next();
+					foodItem.setItemName(foodName);
+					break;
+				case 2:
+					System.out.println("Given the new Taste:");
+					System.out.println("Enter taste: \n1. For Spicy. \n2. For Sweet. \n3. For Sour. \n4. For Sweet-Sour");
+					int tasteChoice = sc.nextInt();
+					switch(tasteChoice) {
+					case 1:
+						foodItem.setTaste(FoodItem.Taste.SPICY);
+						break;
+					case 2:
+						foodItem.setTaste(FoodItem.Taste.SWEET);
+						break;
+					case 3:
+						foodItem.setTaste(FoodItem.Taste.SOUR);
+						break;
+					case 4:
+						foodItem.setTaste(FoodItem.Taste.SWEET_SOUR);
+						break;
+				}
+					break;
+				case 3:
+					System.out.println("Give the new Category: ");
+					System.out.println("Enter category type: \n1. Starter. \n2. For Main Course. \n3. For Beverages ");
+					int categoryChoice = sc.nextInt();
+					switch(categoryChoice) {
+						case 1:
+							foodItem.setCategory(FoodItem.Category.STARTER);
+							break;
+						case 2:
+							foodItem.setCategory(FoodItem.Category.MAIN_COURSE);
+							break;
+						case 3:
+							foodItem.setCategory(FoodItem.Category.BEVERAGES);
+							break;
+					}
+					break;
+				case 4:
+					System.out.println("Enter the type of food:");
+					System.out.println("Enter the type: \n1. For Veg type. \n2. For Non Veg Type.");
+					int type = sc.nextInt();
+					switch(type) {
+						case 1:
+							foodItem.setType(FoodItem.VegType.Veg);
+							break;
+						case 2:
+							foodItem.setType(FoodItem.VegType.Non_Veg);
+							break;		
+					}
+					break;
+				case 5: 
+					System.out.println("Give the new price:");
+					int price = sc.nextInt();
+					foodItem.setPrice(price);
+					break;
+			}
+			System.out.println("Item details edited!");
+		return foodItem;
+	}
 }
