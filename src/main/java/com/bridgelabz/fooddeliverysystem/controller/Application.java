@@ -11,13 +11,13 @@ import com.bridgelabz.fooddeliverysystem.view.UserInterface;
 public class Application {
 
 	public static void main(String[] args) {
-		UserInterface userInterface = new UserInterface();
+		UserInterface userInterface = UserInterface.getInstance();
         userInterface.showUserMenu();
 	}
 	
 	public void handleUserSelection(int n) {
 		FoodStore foodStore = FoodStore.getInstance();
-		UserInterface userInterface = new UserInterface();
+		UserInterface userInterface = UserInterface.getInstance();
 		switch (n) {
 			case 1:
 				FoodItem foodItem = userInterface.createItem();
@@ -33,6 +33,12 @@ public class Application {
 				userInterface.print(foodStore.getFoodList());
 				break;
 			case 4:
+				System.out.println("Enter the name which you want to edit: ");
+                String name = new Scanner(System.in).nextLine();
+                FoodItem food = foodStore.getFoodItem(name);
+                userInterface.editItem(food);
+				break;
+			case 5:
 				break;
 			}
 		}

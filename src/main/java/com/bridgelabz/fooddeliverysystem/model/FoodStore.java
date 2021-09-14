@@ -13,6 +13,10 @@ public class FoodStore {
 		foodList.add(foodItem);
 	}
 	
+	private FoodStore( ) {
+		
+	}
+	
 	public static synchronized FoodStore getInstance() {
 		if(instance == null) {
 			instance = new FoodStore();
