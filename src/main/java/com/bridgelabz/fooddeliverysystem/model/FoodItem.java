@@ -20,6 +20,14 @@ public class FoodItem {
 	public int price;
 	public String itemName;
 
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
 	public int getPrice() {
 		return price;
 	}

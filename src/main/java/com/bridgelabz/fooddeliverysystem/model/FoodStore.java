@@ -21,7 +21,11 @@ public class FoodStore {
 	}
 	
 	public void remove(String foodName) {
-		foodList.remove(foodName);
+		for(int i=0; i<foodList.size(); i++) {
+			if(foodList.get(i).itemName.equals(foodName)) {
+				foodList.remove(foodList.get(i));
+					}
+		}
 	}
 	
 	public List<FoodItem> getFoodList() {

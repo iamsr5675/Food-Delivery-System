@@ -87,12 +87,4 @@ public class UserInterface {
 		return foodItem;
 	}
 	
-	public void remove(String foodName) {
-		for(int i=0; i<foodList.size(); i++) {
-			if(Objects.equals(foodName, foodList.get(i).itemName)) {
-				foodList.remove(foodList.get(i));
-					}
-		}
-	}
-	
 }
