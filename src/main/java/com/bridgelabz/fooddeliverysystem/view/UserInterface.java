@@ -128,6 +128,8 @@ public class UserInterface {
 					case 4:
 						foodItem.setTaste(FoodItem.Taste.SWEET_SOUR);
 						break;
+					default:
+						System.out.println("Invalid Input!!");
 				}
 					break;
 				case 3:
@@ -144,6 +146,8 @@ public class UserInterface {
 						case 3:
 							foodItem.setCategory(FoodItem.Category.BEVERAGES);
 							break;
+						default:
+							System.out.println("Invalid Input!!");
 					}
 					break;
 				case 4:
@@ -157,6 +161,8 @@ public class UserInterface {
 						case 2:
 							foodItem.setType(FoodItem.VegType.Non_Veg);
 							break;		
+						default:
+							System.out.println("Invalid Input!!");
 					}
 					break;
 				case 5: 
@@ -164,6 +170,8 @@ public class UserInterface {
 					int price = sc.nextInt();
 					foodItem.setPrice(price);
 					break;
+				default:
+					System.out.println("Invalid Input!!");
 			}
 			System.out.println("Item details edited!");
 		return foodItem;
